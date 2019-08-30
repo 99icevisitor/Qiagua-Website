@@ -9,7 +9,7 @@
     
 }
 .title-empty{
-	width: 180px;
+	width: 120px;
 	height: auto;
 }
 .title li{
@@ -32,13 +32,16 @@
 	height: 30px;
 	margin-top: 7px;
 	margin-left: 20px;
-	border: solid;
+	border: solid 1px;
 	border-color: #eeeeee;
-	broder: 1px;
 	border-radius: 30px;
 	background: rgba();
 }
+.cls-bar .cls-bar-content{
+	margin-top: 48px;
+}
 .cls-bar-icon{
+	position: absolute;
 	width: 10px;
 	height: 10px;
 	margin-top: 6px;
@@ -47,7 +50,7 @@
 .cls-bar-word {
 	position: absolute;
 	margin-left: 20px;
-	margin-top: -14px;
+	margin-top: 0px;
 	font-family: "FangSong";
 	font: bold;
 	font-size: 24;
@@ -113,6 +116,7 @@
 	height: 80px;
 }
 .search{
+	position: absolute;
 	width: 288px;
 	height: 30px;
 	margin-top: 10px;
@@ -151,9 +155,10 @@
 	overflow: hidden;
 }
 .post{
+	position: absolute;
 	width: 80px;
 	height: 30px;
-	margin-left: 60px;
+	margin-left: 360px;
 	margin-top: 10px;
 	border: none;
 	border-radius: 30px;
@@ -196,6 +201,10 @@
 	margin-top: -1px;
 	margin-left: -5px;
 }
+.keeper{
+	position: absolute;
+	margin-left: 980px;
+}
 .notice-tip .fa{
 	color: #7ecef4;
 }
@@ -226,6 +235,7 @@
 .notice:hover{/*表现出来的hover*/
 	background-color: #eeeeee;
 }
+
 ul .drop-down-content a{/*下拉菜单显示时样式*/
     display: block; 
     text-decoration: none;
@@ -240,8 +250,13 @@ ul .drop-down-content a{/*下拉菜单显示时样式*/
 ul .drop-down-content a div{
 	float: left;
 }
-.drop-down{
-    position: relative;
+.drop-down1{
+    position: absolute;
+    margin-left: 880px;
+}
+.drop-down2{
+    position: absolute;
+    margin-left: 1080px;
 }
 .notice-tip{
 	width: 10px;
@@ -276,16 +291,25 @@ ul .drop-down-content a div{
     margin-left: 10px;
     margin-top: 6px;
 }
-.drop-down:hover .notice:hover a{/*为了在‘空白处’仍然能显示出下拉菜单*/
+.drop-down1:hover .notice:hover a{/*为了在‘空白处’仍然能显示出下拉菜单*/
 	height: 80px;
 }
-.drop-down:hover .drop-down-content{/*在鼠标移动到上级菜单时，下拉菜单显示出来*/
+.drop-down1:hover .drop-down-content{/*在鼠标移动到上级菜单时，下拉菜单显示出来*/
+    display: block;
+}
+.drop-down2:hover .notice:hover a{/*为了在‘空白处’仍然能显示出下拉菜单*/
+	height: 80px;
+}
+.drop-down2:hover .drop-down-content{/*在鼠标移动到上级菜单时，下拉菜单显示出来*/
     display: block;
 }
 .drop-down-content li:hover a{
     background-color: #eeeeee;
 }
-.drop-down .fa{
+.drop-down1 .fa{
+	color: #7ecef4;
+}
+.drop-down2 .fa{
 	color: #7ecef4;
 }
 .user{
