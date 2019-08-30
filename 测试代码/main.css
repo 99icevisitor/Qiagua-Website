@@ -28,7 +28,7 @@
 	margin-top: 0;
 }
 .classfication-bar{
-	width: 80px;
+	width: 100px;
 	height: 30px;
 	margin-top: 7px;
 	margin-left: 20px;
@@ -59,8 +59,8 @@
 .cls-bar-content{
 	display: none;
     position: absolute;
-	width: 280px;
-	height: 180px;
+	width: 310px;
+	height: 200px;
 	-webkit-box-shadow:0 0 3px rgba(0,0,0,.2);
     -moz-box-shadow:0 0 3px rgba(0,0,0,.2);
     box-shadow:0 0 3px rgba(0,0,0,.2);
@@ -69,21 +69,37 @@
 	margin-left: -80px;
 }
 .cls-option{
-	width: 280px;
+	width: 290px;
 	height: 28px;
 	margin-left: 4px;
 }
+.cls-option-img{
+	width: 280px;
+	height: 28px;
+	margin-left: 24px;
+	margin-top: 4px;
+}
 .cls-first{
-	margin-top: 12px;
+	margin-top: 20px;
 }
 .cls-option a{
 	color: #838383;
+}
+.cls-style{
+	width: 62px;
+	height: 24px;
+	float: left;
+	margin-left: 10px;
+}
+.cls-style:hover{
+	background-color: #eeeeee;
 }
 .hot{
 	font-size: 18px;
 	font: bold;
 	color: white;
 	padding-left: 80px;
+	padding-top: 10px;
 }
 .hot-fire{
 	width: 40px;
@@ -94,10 +110,10 @@
 	margin-left: 17px;
 }
 .cls-words3{
-	margin-left: 32px;
+	margin-left: 17px;
 }
 .cls-words4{
-	margin-left: 7px;
+	margin-left: 0px;
 }
 .classfication-bar:hover {
 	background-color: #edf9ff;
@@ -189,6 +205,12 @@
 	width: 120px;
 	margin-left: -20px;
 }
+.post-button:hover .drop-down-content2{
+	display: block;
+	margin-top: -54px;
+	width: 120px;
+	margin-left: -20px;
+}
 .post-button:hover .post-img-bg{
 	height: 100px;
 }
@@ -203,12 +225,18 @@
 }
 .keeper{
 	position: absolute;
-	margin-left: 980px;
+	margin-left: 920px;
 }
 .notice-tip .fa{
 	color: #7ecef4;
 }
 .notice{
+	width: 100px;
+	height:50px;
+	background: rgba();
+	margin-left: 20px;
+}
+.user-name{
 	width: 100px;
 	height:50px;
 	background: rgba();
@@ -235,8 +263,26 @@
 .notice:hover{/*表现出来的hover*/
 	background-color: #eeeeee;
 }
-
+.user-name:hover{/*表现出来的hover*/
+	background: rgba();
+}
+.fa .fa-telegram{
+	width: 30px;
+	height: 30px;
+	color: red;
+}
 ul .drop-down-content a{/*下拉菜单显示时样式*/
+    display: block; 
+    text-decoration: none;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #838383;
+    background-color: white;
+    margin-top: -5px;
+}
+ul .drop-down-content2 a{/*下拉菜单显示时样式*/
     display: block; 
     text-decoration: none;
     width: 120px;
@@ -250,13 +296,31 @@ ul .drop-down-content a{/*下拉菜单显示时样式*/
 ul .drop-down-content a div{
 	float: left;
 }
+ul .drop-down-content2 a div{
+	float: left;
+}
 .drop-down1{
     position: absolute;
-    margin-left: 880px;
+    margin-left: 820px;
 }
 .drop-down2{
     position: absolute;
-    margin-left: 1080px;
+    margin-left: 1020px;
+}
+.user-head{
+	width: 40px;
+	position: absolute;
+	margin-left: 30px;
+	margin-top: 5px;
+}
+.user-head-img{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+.user-name{
+	margin-left: 60px;
+	position: absolute;
 }
 .notice-tip{
 	width: 10px;
@@ -291,19 +355,39 @@ ul .drop-down-content a div{
     margin-left: 10px;
     margin-top: 6px;
 }
+.drop-down-content2{
+	padding: 0;
+    display: none;
+    position: absolute;
+    -webkit-box-shadow:0 0 3px rgba(0,0,0,.2);
+    -moz-box-shadow:0 0 3px rgba(0,0,0,.2);
+    box-shadow:0 0 3px rgba(0,0,0,.2);
+    background:#fff;
+    margin-left: 50px;
+    margin-top: 56px;
+}
 .drop-down1:hover .notice:hover a{/*为了在‘空白处’仍然能显示出下拉菜单*/
 	height: 80px;
 }
 .drop-down1:hover .drop-down-content{/*在鼠标移动到上级菜单时，下拉菜单显示出来*/
     display: block;
 }
-.drop-down2:hover .notice:hover a{/*为了在‘空白处’仍然能显示出下拉菜单*/
+.drop-down1:hover .drop-down-content2{
+    display: block;
+}
+.drop-down2:hover .user-name:hover a{/*为了在‘空白处’仍然能显示出下拉菜单*/
 	height: 80px;
 }
 .drop-down2:hover .drop-down-content{/*在鼠标移动到上级菜单时，下拉菜单显示出来*/
     display: block;
 }
+.drop-down2:hover .drop-down-content2{
+    display: block;
+}
 .drop-down-content li:hover a{
+    background-color: #eeeeee;
+}
+.drop-down-content2 li:hover a{
     background-color: #eeeeee;
 }
 .drop-down1 .fa{
