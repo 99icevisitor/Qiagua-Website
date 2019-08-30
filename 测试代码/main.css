@@ -1,0 +1,304 @@
+@CHARSET "UTF-8";
+.title{
+	height:60px;
+	width:100%;
+	-webkit-box-shadow:0 0 3px rgba(0,0,0,.2);
+    -moz-box-shadow:0 0 3px rgba(0,0,0,.2);
+    box-shadow:0 0 3px rgba(0,0,0,.2);
+    background:#fff;
+    
+}
+.title-empty{
+	width: 180px;
+	height: auto;
+}
+.title li{
+	list-style: none;
+	float: left;
+	padding-top: 5px;
+}
+.name{
+	width: 120px;
+	height: 50px;
+	margin-left: 30px;
+}
+.name-img{
+	width: 120px;
+	height: 50px;
+	margin-top: 0;
+}
+.classfication-bar{
+	width: 80px;
+	height: 30px;
+	margin-top: 7px;
+	margin-left: 20px;
+	border: solid;
+	border-color: #eeeeee;
+	broder: 1px;
+	border-radius: 30px;
+	background: rgba();
+}
+.cls-bar-icon{
+	width: 10px;
+	height: 10px;
+	margin-top: 6px;
+	margin-left: 8px;
+}
+.cls-bar-word {
+	position: absolute;
+	margin-left: 20px;
+	margin-top: -14px;
+	font-family: "FangSong";
+	font: bold;
+	font-size: 24;
+	color: #838383;
+}
+.cls-bar-content{
+	display: none;
+    position: absolute;
+	width: 280px;
+	height: 180px;
+	-webkit-box-shadow:0 0 3px rgba(0,0,0,.2);
+    -moz-box-shadow:0 0 3px rgba(0,0,0,.2);
+    box-shadow:0 0 3px rgba(0,0,0,.2);
+    background:#fff;
+	margin-top: -40px;
+	margin-left: -80px;
+}
+.cls-option{
+	width: 280px;
+	height: 28px;
+	margin-left: 4px;
+}
+.cls-first{
+	margin-top: 12px;
+}
+.cls-option a{
+	color: #838383;
+}
+.hot{
+	font-size: 18px;
+	font: bold;
+	color: white;
+	padding-left: 80px;
+}
+.hot-fire{
+	width: 40px;
+	height: 30px;
+
+}
+.cls-words2{
+	margin-left: 17px;
+}
+.cls-words3{
+	margin-left: 32px;
+}
+.cls-words4{
+	margin-left: 7px;
+}
+.classfication-bar:hover {
+	background-color: #edf9ff;
+	border-color: #c5e7f7;
+}
+.classfication-bar:hover .fa{
+	color: #7ecef4;
+}
+.classfication-bar:hover .cls-bar-word{
+	color: #7ecef4;
+}
+.classfication-bar:hover .cls-bar-content{/*显示下拉菜单*/
+	display: block;
+}
+.classfication-bar:hover .cls-bar{
+	height: 80px;
+}
+.search{
+	width: 288px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 40px;
+	border: none;
+	border-radius: 30px;
+	background:#7ecef4;
+	overflow: hidden;/*隐藏框框*/
+}
+.search-kw{/*关键词输入框*/
+	width: 250px;
+	height: 28px;
+	margin-top: 1px;
+	margin-left: 2px;
+	padding-left: 10px;
+	background-color: white;
+	border: none;
+	outline:none;/*消去蓝色框框*/
+	border-radius: 30px 0 0 30px;/*左上、右上、右下、左下*/
+}
+.search-button{/*搜索按钮*/
+	width: 40px;
+	height: 30px;
+	margin-left: 2px;
+	background-color: #7ecef4;
+	border: none;
+	border-radius: 0 30px 30px 0;/*左上、右上、右下、左下*/
+	position: absolute;
+	outline:none;/*消去蓝色框框*/
+}
+.search-icon{
+	width: 24px;
+	height: 24px;
+	margin-top: 1px;
+	margin-left: -6px;
+	overflow: hidden;
+}
+.post{
+	width: 80px;
+	height: 30px;
+	margin-left: 60px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 30px;
+	background: #7ecef4;
+}
+.post-button{
+	width: 80px;
+	height: 30px;
+	border: none;
+	border-radius: 30px;
+	background-color: #7ecef4;
+}
+.post-button:active{
+	top:1px;
+	box-shadow: 0 1px 3px #0C5B83 inset,0 3px 0 #fff;
+	background: -webkit-linear-gradient(top,#7ecef4,#71C6EE);
+	background: -moz-linear-gradient(top,#7ecef4,#71C6EE);
+	background: linear-gradient(top,#7ecef4,#71C6EE);
+	}
+.post-button:hover{
+	background: -webkit-linear-gradient(top,#7EC4EE,#61AFE0);
+	background: -moz-linear-gradient(top,#7EC4EE,#61AFE0);
+	background: linear-gradient(top,#7EC4EE,#61AFE0);
+}
+.post-button:hover .drop-down-content{
+	display: block;
+	margin-top: -54px;
+	width: 120px;
+	margin-left: -20px;
+}
+.post-button:hover .post-img-bg{
+	height: 100px;
+}
+.post-button:hover:after{
+	background:-webkit-linear-gradient(right,#61BCDB,#97E0F3 60%);
+	background:-moz-linear-gradient(right,#61BCDB,#97E0F3 60%);
+	background:linear-gradient(right,#61BCDB,#97E0F3 60%); 
+}
+.post-icon{
+	margin-top: -1px;
+	margin-left: -5px;
+}
+.notice-tip .fa{
+	color: #7ecef4;
+}
+.notice{
+	width: 100px;
+	height:50px;
+	background: rgba();
+	margin-left: 20px;
+}
+.notice-btn1{
+	position: absolute;
+	margin-top: 12px;
+	margin-left: 20px;
+	font-family: "FangSong";
+	font: bold;
+	font-size: 24;
+	color: #838383;
+}
+.notice-btn2{
+	position: absolute;
+	margin-top: 12px;
+	margin-left: 16px;
+	font-family: "FangSong";
+	font: bold;
+	font-size: 24;
+	color: #838383;
+}
+.notice:hover{/*表现出来的hover*/
+	background-color: #eeeeee;
+}
+ul .drop-down-content a{/*下拉菜单显示时样式*/
+    display: block; 
+    text-decoration: none;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #838383;
+    background-color: white;
+    margin-top: -5px;
+}
+ul .drop-down-content a div{
+	float: left;
+}
+.drop-down{
+    position: relative;
+}
+.notice-tip{
+	width: 10px;
+	height: 10px;
+	margin-left: 14px;
+	margin-top: 18px;
+}
+.notice-words{
+	margin-left: 10px;
+}
+.notice2 {
+    width:10px;
+    height:10px;
+    line-height:10px;
+    font-size:6px;
+    color:#fff;
+    text-align:center;
+    background-color:#f00;
+    border-radius:50%;
+    position:relative;
+    right:-10px;
+    top:-20px;
+}
+.drop-down-content{/*下拉菜单一般状态下隐藏*/
+    padding: 0;
+    display: none;
+    position: absolute;
+    -webkit-box-shadow:0 0 3px rgba(0,0,0,.2);
+    -moz-box-shadow:0 0 3px rgba(0,0,0,.2);
+    box-shadow:0 0 3px rgba(0,0,0,.2);
+    background:#fff;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+.drop-down:hover .notice:hover a{/*为了在‘空白处’仍然能显示出下拉菜单*/
+	height: 80px;
+}
+.drop-down:hover .drop-down-content{/*在鼠标移动到上级菜单时，下拉菜单显示出来*/
+    display: block;
+}
+.drop-down-content li:hover a{
+    background-color: #eeeeee;
+}
+.drop-down .fa{
+	color: #7ecef4;
+}
+.user{
+	width: 100px;
+	height: 50px;
+	margin-left: 20px;
+}
+.user-btn{
+	position: absolute;
+	margin-top: 12px;
+	margin-left: 16px;
+	font-family: "FangSong";
+	font: bold;
+	font-size: 24;
+	color: #838383;
+}
