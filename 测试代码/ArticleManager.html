@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    <meta charset="utf-8" />
+    <title>恰瓜，一起来恰瓜！--文章管理</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is ArticleManager page">
+	
+	<link rel="stylesheet" type="text/css" href="ArticleManager.css">
+  	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  	<style type="text/css">
+  		#id1{
+  			margin-top: 130px;
+  		}
+  		#id2{
+  			margin-top: 260px;
+  		}
+  	</style>
+</head>
+<body>
+	<div id="tab">
+		<div id="tabList"></div>
+	</div>
+  <center>
+	<div class="mainDiv">
+		<div class="leftDiv">
+			<ul>
+				<li class="checked"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;<span class="listDiv">写文章</span> </li>
+				<li class="unchecked"><i class="fa fa-list-ul"></i>&nbsp;&nbsp;<span class="listDiv">已发布</span></li>
+				<li class="unchecked"><i class="fa fa-folder-open-o"></i>&nbsp;&nbsp;<span class="listDiv">素材库</span></li>
+			</ul>
+		</div>
+		<div class="RightDiv">
+			<div class="content-drafts">
+				<p class="draft-word">草稿(0)</p>
+			</div>
+			<div class="content-detials">
+				<ul>
+					<li><img src="images/main/kker.jpg" alt="文章图片" class="article-img"></li>
+					<li><a class="modify-article" href=""><p class="article-title">文章标题TITLE1</p></a> <p class="article-time">编辑于2019年3月4日 20:39</p></li>
+					<li class="article-modify">
+						<div class="article-modify-button"><a href="">管理</a></div>
+				        <ul class="drop-down-content">
+				          <li >
+				          	<a href="">编辑</a>
+				      	  </li>
+				      	  <li>
+				          	<a href="">删除</a>
+				          </li>
+				        </ul>
+			    	</li>
+				</ul>
+			</div>
+			<div class="content-detials" id="id1">
+				<ul class="drop-down1">
+					<li><img src="images/main/kker.jpg" alt="文章图片" class="article-img"></li>
+					<li><p class="article-title">文章标题TITLE2</p> <p class="article-time">编辑于2019年3月13日 20:56</p></li>
+					<li class="article-modify">
+						<div class="article-modify-button"><a href="">管理</a></div>
+				        <ul class="drop-down-content">
+				          <li >
+				          	<a href="">编辑</a>
+				      	  </li>
+				      	  <li>
+				          	<a href="">删除</a>
+				          </li>
+				        </ul>
+			    	</li>
+				</ul>
+			</div>
+			<div class="content-detials" id="id2">
+				<ul class="drop-down1">
+					<li><img src="images/main/kker.jpg" alt="文章图片" class="article-img"></li>
+					<li><p class="article-title">文章标题TITLE3</p> <p class="article-time">编辑于2019年3月23日 07:39</p></li>
+					<li class="article-modify">
+						<div class="article-modify-button"><a href="">管理</a></div>
+				        <ul class="drop-down-content">
+				          <li >
+				          	<a href="">编辑</a>
+				      	  </li>
+				      	  <li>
+				          	<a href="">删除</a>
+				          </li>
+				        </ul>
+			    	</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+  </center>
+
+
+
+</body>
+</html>
+
