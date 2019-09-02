@@ -23,26 +23,27 @@
   	</style>
 </head>
 <body>
-	<div id="tab">
-		<div id="tabList"></div>
-	</div>
+	
   <center>
-	<div class="mainDiv">
+	<div class="mainDiv tab">
 		<div class="leftDiv">
 			<ul>
-				<li class="checked"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;<span class="listDiv">写文章</span> </li>
-				<li class="unchecked"><i class="fa fa-list-ul"></i>&nbsp;&nbsp;<span class="listDiv">已发布</span></li>
-				<li class="unchecked"><i class="fa fa-folder-open-o"></i>&nbsp;&nbsp;<span class="listDiv">素材库</span></li>
+				<li class="unchecked"><a href="ArticleManager1.html"><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;<span class="listDiv">写文章</span></a> </li>
+				<li class="checked"><i class="fa fa-list-ul"></i>&nbsp;&nbsp;<span class="listDiv">已发布</span></li>
+				<li class="unchecked"><a href="ArticleManager3.html"><i class="fa fa-folder-open-o"></i>&nbsp;&nbsp;<span class="listDiv">素材库</span></a></li>
 			</ul>
 		</div>
 		<div class="RightDiv">
 			<div class="content-drafts">
-				<p class="draft-word">草稿(0)</p>
+				<p class="draft-word">已发布文章(0)</p>
+			</div>
+			<div class="content-detials nothing"><!--需要时才显示-->
+				<p>您还没有写过文章，您可以立即<a class="start-to-add" href="">写文章</a></p>
 			</div>
 			<div class="content-detials">
 				<ul>
 					<li><img src="images/main/kker.jpg" alt="文章图片" class="article-img"></li>
-					<li><a class="modify-article" href=""><p class="article-title">文章标题TITLE1</p></a> <p class="article-time">编辑于2019年3月4日 20:39</p></li>
+					<li><a class="modify-article" href=""><p class="article-title">TITLE1</p></a> <p class="article-time">编辑于2019年3月4日 20:39</p></li>
 					<li class="article-modify">
 						<div class="article-modify-button"><a href="">管理</a></div>
 				        <ul class="drop-down-content">
@@ -57,9 +58,9 @@
 				</ul>
 			</div>
 			<div class="content-detials" id="id1">
-				<ul class="drop-down1">
+				<ul>
 					<li><img src="images/main/kker.jpg" alt="文章图片" class="article-img"></li>
-					<li><p class="article-title">文章标题TITLE2</p> <p class="article-time">编辑于2019年3月13日 20:56</p></li>
+					<li><a class="modify-article" href=""><p class="article-title">TITLE2</p></a> <p class="article-time">编辑于2019年3月18日 20:56</p></li>
 					<li class="article-modify">
 						<div class="article-modify-button"><a href="">管理</a></div>
 				        <ul class="drop-down-content">
@@ -76,7 +77,7 @@
 			<div class="content-detials" id="id2">
 				<ul class="drop-down1">
 					<li><img src="images/main/kker.jpg" alt="文章图片" class="article-img"></li>
-					<li><p class="article-title">文章标题TITLE3</p> <p class="article-time">编辑于2019年3月23日 07:39</p></li>
+					<li><a class="modify-article" href=""><p class="article-title">TITLE3</p></a> <p class="article-time">编辑于2019年5月29日 06:56</p></li>
 					<li class="article-modify">
 						<div class="article-modify-button"><a href="">管理</a></div>
 				        <ul class="drop-down-content">
@@ -93,9 +94,6 @@
 		</div>
 	</div>
   </center>
-
-
-
 </body>
 </html>
 

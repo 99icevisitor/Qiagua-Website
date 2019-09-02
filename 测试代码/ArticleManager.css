@@ -65,6 +65,18 @@ a{
 .unchecked>span{
 	color: #838383;
 }
+.unchecked>a:link i{
+	color: #7ecef4;
+}
+.unchecked>a:link span{
+	color: #838383;
+}
+.unchecked>a:visited i{
+	color: #7ecef4;
+}
+.unchecked>a:visited span{
+	color: #838383;
+}
 .content-drafts{
 	width: 100%;
 	height: 70px;
@@ -74,6 +86,57 @@ a{
 	-webkit-box-shadow:0 0 1px rgba(0,0,0,.1);
     -moz-box-shadow:0 0 1px rgba(0,0,0,.1);
     box-shadow:0 0 1px rgba(0,0,0,.1);
+}
+.content-detials>p{
+	color: #838383;
+	font-family: "FangSong";
+}
+.start-to-add{
+	color: #7ecef4;
+	font-family: "FangSong";
+}
+.start-to-add:link{
+	color: #7ecef4;
+}
+.start-to-add:active{
+	color: #7ecef4;
+}
+.start-to-add:hover{
+	color: #7ecef4;
+}
+.add-button{
+	width: 140px;
+	height: 30px;
+	border-style: none;
+	border-radius: 15px;
+	background-color: #7ecef4;
+	position: absolute;
+	margin-left: 70%;
+	margin-top: -50px;
+	font-family: "FangSong";
+	font-size: 24px;
+	font-style: bold;
+	text-align: center;
+	padding-top: 2px;
+}
+.add-button:active{
+	box-shadow: 0 1px 3px #0C5B83 inset,0 3px 0 #fff;
+	background: -webkit-linear-gradient(top,#7ecef4,#71C6EE);
+	background: -moz-linear-gradient(top,#7ecef4,#71C6EE);
+	background: linear-gradient(top,#7ecef4,#71C6EE);
+}
+.add-button:hover{
+	background: -webkit-linear-gradient(top,#7EC4EE,#61AFE0);
+	background: -moz-linear-gradient(top,#7EC4EE,#61AFE0);
+	background: linear-gradient(top,#7EC4EE,#61AFE0);
+}
+.add-button:hover:after{
+	background:-webkit-linear-gradient(right,#61BCDB,#97E0F3 60%);
+	background:-moz-linear-gradient(right,#61BCDB,#97E0F3 60%);
+	background:linear-gradient(right,#61BCDB,#97E0F3 60%); 
+}
+.add-word:visited{
+	color: white;
 }
 .draft-word{
 	padding-top: 22px;
@@ -157,12 +220,21 @@ ul .drop-down-content a{/*下拉菜单显示时样式*/
 .drop-down-content a:hover{
 	color: #7ecef4;
 }
-.modify-article a:link{
+.modify-article:link{
 	color: #838383;
 }
-.modify-article a:hover{
+.modify-article:visited{
+	color: black;
+	font-style: bold;
+}
+.modify-article:hover{
 	color: #7ecef4;
 }
-.modify-article a:active{
+.modify-article:active{
 	color: #7ecef4;
+}
+.nothing{
+	text-align: center;
+	margin-top: 200px;
+	display: none;
 }
