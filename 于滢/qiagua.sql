@@ -351,7 +351,7 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `user` (
-  `USER_ID` int(8) NOT NULL,
+  `user_id` int(8) NOT NULL AUTO_INCREMENT,
   `USER_NAME` varchar(30) NOT NULL,
   `PWD` varchar(32) NOT NULL,
   `EMAIL` varchar(100) NOT NULL,
@@ -361,7 +361,7 @@ CREATE TABLE `user` (
   `NAME` varchar(100) DEFAULT NULL,
   `SENDER` varchar(2) DEFAULT NULL,
   `RTIME` date DEFAULT NULL,
-  PRIMARY KEY (`USER_ID`)
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -407,4 +407,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-02 22:34:48
+-- Dump completed on 2019-09-03 13:46:28
