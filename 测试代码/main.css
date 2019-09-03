@@ -410,3 +410,12 @@ ul .drop-down-content2 a div{
 	font-size: 24;
 	color: #838383;
 }
+.Upload-button{
+	background-color: transparent;
+	border-style: none;
+	color: #838383;
+	font-size: 16px;
+	padding-top: 15px;
+	padding-left: 10px;
+	outline: none;
+}
