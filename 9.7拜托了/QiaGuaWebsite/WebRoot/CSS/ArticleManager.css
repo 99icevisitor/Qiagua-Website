@@ -1,0 +1,241 @@
+@CHARSET "UTF-8";
+ul,li{
+	list-style: none;
+	float: left;
+}
+a{
+  text-decoration : none;
+}
+.mainDiv{
+	width: 60%;
+	height: 800px;
+	background-color: rgba();
+	min-width: 800px;
+	min-height: 800px;
+	margin-top: 120px;
+	-webkit-box-shadow:0 0 1px rgba(0,0,0,.1);
+    -moz-box-shadow:0 0 1px rgba(0,0,0,.1);
+    box-shadow:0 0 1px rgba(0,0,0,.1);
+}
+.leftDiv{
+	width: 20%;
+	min-width: 120px;
+	height: 800px;
+	min-height: 800px;
+	margin-left: -80%;
+	background-color: rgba();
+	-webkit-box-shadow:0 0 1px rgba(0,0,0,.1);
+    -moz-box-shadow:0 0 1px rgba(0,0,0,.1);
+    box-shadow:0 0 1px rgba(0,0,0,.1);
+}
+.rightDiv{
+	width: 80%;
+	height: 800px;
+	min-height: 800px;
+	min-width: 600px;
+	background-color: rgba();
+	position: relative;
+	margin-left: 20%;
+	margin-top: -824px;
+}
+.leftDiv ul{
+	margin-top: 0;
+	padding-left: 0;
+	background-color: rgba();
+}
+.leftDiv ul li{
+	height: 40px;
+	width: 100%;
+	min-width: 120px;
+	padding-left: 0;
+	padding-top: 20px;
+	text-align: center;
+}
+.listDiv{
+	font-family: "FangSong";
+	font-size: 20px;
+}
+.checked{
+	background-color: #7ecef4;
+	color: white;
+}
+.unchecked{
+	background-color: rgba();
+	color: #7ecef4;
+}
+.unchecked>span{
+	color: #838383;
+}
+.unchecked>a:link i{
+	color: #7ecef4;
+}
+.unchecked>a:link span{
+	color: #838383;
+}
+.unchecked>a:visited i{
+	color: #7ecef4;
+}
+.unchecked>a:visited span{
+	color: #838383;
+}
+.content-drafts{
+	width: 100%;
+	height: 70px;
+	background-color: rgba();
+	font-size: 24px;
+	text-align: left;
+	-webkit-box-shadow:0 0 1px rgba(0,0,0,.1);
+    -moz-box-shadow:0 0 1px rgba(0,0,0,.1);
+    box-shadow:0 0 1px rgba(0,0,0,.1);
+}
+.content-detials>p{
+	color: #838383;
+	font-family: "FangSong";
+}
+.start-to-add{
+	color: #7ecef4;
+	font-family: "FangSong";
+}
+.start-to-add:link{
+	color: #7ecef4;
+}
+.start-to-add:active{
+	color: #7ecef4;
+}
+.start-to-add:hover{
+	color: #7ecef4;
+}
+.add-button{
+	width: 140px;
+	height: 30px;
+	border-style: none;
+	border-radius: 15px;
+	background-color: #7ecef4;
+	position: absolute;
+	margin-left: 70%;
+	margin-top: -50px;
+	font-family: "FangSong";
+	font-size: 24px;
+	font-style: bold;
+	text-align: center;
+	padding-top: 2px;
+}
+.add-button:active{
+	box-shadow: 0 1px 3px #0C5B83 inset,0 3px 0 #fff;
+	background: -webkit-linear-gradient(top,#7ecef4,#71C6EE);
+	background: -moz-linear-gradient(top,#7ecef4,#71C6EE);
+	background: linear-gradient(top,#7ecef4,#71C6EE);
+}
+.add-button:hover{
+	background: -webkit-linear-gradient(top,#7EC4EE,#61AFE0);
+	background: -moz-linear-gradient(top,#7EC4EE,#61AFE0);
+	background: linear-gradient(top,#7EC4EE,#61AFE0);
+}
+.add-button:hover:after{
+	background:-webkit-linear-gradient(right,#61BCDB,#97E0F3 60%);
+	background:-moz-linear-gradient(right,#61BCDB,#97E0F3 60%);
+	background:linear-gradient(right,#61BCDB,#97E0F3 60%); 
+}
+.add-word:visited{
+	color: white;
+}
+.draft-word{
+	padding-top: 22px;
+	font-family: "FangSong";
+	align-content: left;
+	padding-left: 20px;
+}
+.content-detials{
+	width: 100%;
+	height: 110px;
+	background-color: rgba();
+	position: absolute;
+	-webkit-box-shadow:0 0 1px rgba(0,0,0,.1);
+    -moz-box-shadow:0 0 1px rgba(0,0,0,.1);
+    box-shadow:0 0 1px rgba(0,0,0,.1);
+}
+.article-img{
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.article-title{
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 10px;
+	font-family: "FangSong";
+	font-weight: bold;
+}
+.article-time{
+	position: absolute;
+	margin-left: 50%;
+	margin-top: 10px;
+	font-family: "FangSong";
+}
+.article-modify-button{/*管理按键*/
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 65%;
+	width: 100px;
+	height: 40px;
+	font-family: "FangSong";
+}
+.drop-down-content{/*下拉菜单一般状态下隐藏*/
+    padding: 0;
+    display: none;
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    -webkit-box-shadow:0 0 3px rgba(0,0,0,.2);
+    -moz-box-shadow:0 0 3px rgba(0,0,0,.2);
+    box-shadow:0 0 3px rgba(0,0,0,.2);
+    background: white;
+    margin-top: 70px;
+    margin-left: 68%;
+}
+.article-modify:hover .drop-down-content{/*在鼠标移动到上级菜单时，下拉菜单显示出来*/
+    display: block;
+}
+ul .drop-down-content a{/*下拉菜单显示时样式*/
+    display: block; 
+    text-decoration: none;
+    width: 60px;
+    height: 26px;
+    line-height: 20px;
+    text-align: center;
+    color: #bfbfbf;
+    background-color: white;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.article-modify-button a:link{
+	color: #838383;
+}
+.article-modify-button a:hover{
+	color: #7ecef4;
+}
+.article-modify-button a:active{
+	color: #7ecef4;
+}
+.drop-down-content a:hover{
+	color: #7ecef4;
+}
+.modify-article:link{
+	color: #838383;
+}
+.modify-article:visited{
+	color: black;
+	font-style: bold;
+}
+.modify-article:hover{
+	color: #7ecef4;
+}
+.modify-article:active{
+	color: #7ecef4;
+}
+.nothing{
+	text-align: center;
+	margin-top: 200px;
+	display: none;
+}
