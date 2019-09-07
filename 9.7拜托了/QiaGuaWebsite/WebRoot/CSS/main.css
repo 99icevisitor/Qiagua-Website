@@ -28,7 +28,7 @@
 	margin-top: 0;
 }
 .classfication-bar{
-	width: 100px;
+	width: 80px;
 	height: 30px;
 	margin-top: 7px;
 	margin-left: 20px;
@@ -66,7 +66,7 @@
     box-shadow:0 0 3px rgba(0,0,0,.2);
     background:#fff;
 	margin-top: -40px;
-	margin-left: -80px;
+	margin-left: -120px;
 }
 .cls-option{
 	width: 290px;
@@ -139,8 +139,8 @@
 	margin-left: 40px;
 	border: none;
 	border-radius: 30px;
-	background:#7ecef4;
-	overflow: hidden;/*隐藏框框*/
+	background: #7ecef4;
+	overflow: hidden;
 }
 .search-kw{/*关键词输入框*/
 	width: 250px;
@@ -156,7 +156,8 @@
 .search-button{/*搜索按钮*/
 	width: 40px;
 	height: 30px;
-	margin-left: 2px;
+	margin-left: 0;/**/
+	margin-top: 0px;/**/
 	background-color: #7ecef4;
 	border: none;
 	border-radius: 0 30px 30px 0;/*左上、右上、右下、左下*/
@@ -166,8 +167,8 @@
 .search-icon{
 	width: 24px;
 	height: 24px;
-	margin-top: 1px;
-	margin-left: -6px;
+	margin-top: -6px;/**/
+	margin-left: -13px;/**/
 	overflow: hidden;
 }
 .post{
@@ -220,8 +221,8 @@
 	background:linear-gradient(right,#61BCDB,#97E0F3 60%); 
 }
 .post-icon{
-	margin-top: -1px;
-	margin-left: -5px;
+	margin-top: 0px;
+	margin-left: 0px;
 }
 .keeper{
 	position: absolute;
@@ -410,12 +411,40 @@ ul .drop-down-content2 a div{
 	font-size: 24;
 	color: #838383;
 }
-.Upload-button{
-	background-color: transparent;
-	border-style: none;
+.login-style{
+	font-family:"FangSong";
+	font-size:24px;
 	color: #838383;
-	font-size: 16px;
-	padding-top: 15px;
-	padding-left: 10px;
-	outline: none;
+}
+.Upload-button{/**/
+	color: #838383;
+	font-family:"FangSong";
+	font-size:16px;
+}
+.Upload-pic-button{
+	width: 120px;
+	height: 50px;
+	margin-left: 0px;
+	margin-top: 0px;
+	background-color: transparent;
+	float: left;
+}
+.Upload-pic-button>i{
+	color: #7ecef4;
+	margin-left: -80px;
+	margin-top: 5px;
+}
+.Upload-pic-button>p{
+	color: #838383;
+	margin-top: -18px;
+	margin-left: 5px;
+}
+.Upload-pic-button:hover{
+	background-color: #eeeeee;
+}
+.Upload-pic-button:active{
+	background-color: transparent;
+}
+.Upload-pic-button:visited{
+	background-color: transparent;
 }
