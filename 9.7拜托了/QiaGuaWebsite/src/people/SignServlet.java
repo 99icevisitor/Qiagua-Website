@@ -73,9 +73,15 @@ public class SignServlet extends HttpServlet {
 		try {
 			if(userBean.isSuccess(name,pw)){//用户绑定当前ID,成功登录
 				int ID = userBean.getID(name);
-				request.getSession().setAttribute("ID", ID);
-				response.sendRedirect("main.jsp");
-				return;
+				if(ID==1){
+					response.sendRedirect("Admin.html");
+					return;
+				}
+				else{
+					request.getSession().setAttribute("ID", ID);
+					response.sendRedirect("main.jsp");
+					return;
+				}
 			}
 			else{
 				System.out.println("--用户登录失败！--");
