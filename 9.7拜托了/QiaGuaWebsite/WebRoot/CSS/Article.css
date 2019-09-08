@@ -143,16 +143,7 @@
 			background-color: red;
 			margin-top: -100px;
 		}
-		.getimg{
-			width: 700px;
-			height: 200px;
-			background-color: transparent;
-		}
-		.tip-words{
-			font-size: 14px;
-			font-family: "FangSong";
-			color: #838383;
-		}
+		
 		.article-title{
 			width: 700px;
 			height: 72px;

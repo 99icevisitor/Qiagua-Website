@@ -24,7 +24,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		else{
 	   		int ID = (Integer)request.getSession().getAttribute("ID");
 	   		System.out.println("--Follow页面绑定的用户ID是:"+ID+"--");
-	   		request.getSession().setAttribute("ID", ID);%>
+	   		request.getSession().setAttribute("ID", ID);
+	   		request.getSession().setAttribute("jsp", "follow");
+	   		%>
 	   		
 	<div class="main">
 		<div class="links">
@@ -127,7 +129,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<a href="FollowServlet" class="btn-to"><div class="schv-btn-0"><center><div class="follow-style">关注</div></center></div></a>
 				</div>
 			</div>
-
+<form action="FollowServlet" method="get">
 			<div class="user-model type-2" id="type-3">
 				<div class="user-img">
 					<img src="images/follow/埋酱.jpeg" alt="用户头像" class="img-style" />
@@ -147,10 +149,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 				</div>
 				<div class="btn-to-schv">
-					<a href="FollowServlet" class="btn-to"><div class="schv-btn-0"><center><div class="follow-style">关注</div></center></div></a>
+					<div class="schv-btn-0"><center><button type="submit" name="qia" value="2"><div class="follow-style">关注</div></button></center></div>
 				</div>
 			</div>
-
+		</form>
 		</div>
 	</div>
 	<%} %>

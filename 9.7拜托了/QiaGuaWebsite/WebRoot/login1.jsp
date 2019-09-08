@@ -61,9 +61,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	       	alert("请输入用户名！");
 	       	return false;
 	       }
-	       else if(inputPwd.length<=0)
+	       else if(inputUser.length>10){
+	       alert("用户名应该在十个字符以内！");
+	       return false;}
+	       else if(inputPwd.length<6||inputPwd.length>16)
 	       {
-	       	alert("请输入密码！");
+	       	alert("密码应有6~16位！");
 	       	return false;
 	       }
 	       else if(inputConfirm.length<=0)

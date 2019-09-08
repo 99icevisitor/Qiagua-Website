@@ -23,6 +23,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
   <%
+  	if(request.getAttribute("success")!=null){
+  		String success=(String) request.getAttribute("success");
+  		if(success.equals("confirm")){
+  			System.out.println("--success confirm 转载到Error界面--");
+  			request.setAttribute("Smessage","1");
+  		}
+  		else if(success.equals("delete")){
+  			System.out.println("--success delete 转载到Error界面--");
+  			request.setAttribute("Smessage","2");
+  		}
+  		request.setAttribute("again", true);
+  		response.sendRedirect("AdministratorServlet");
+  		System.out.println("--从Error界面重定向跳转回AdminServlet--");
+  		return;
+  	}
   	if(request.getAttribute("Emessage")!=null){//信息不空
   		String Emessage = (String)request.getAttribute("Emessage");
 	  	if(Emessage.equals("user_name")){ %>
@@ -106,6 +121,89 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  		</div>
 	  		</center>
 	  		<%  
+	  	}
+	  	else if(Emessage.equals("Admin_ID_NULL")){//无ID--管理员无法以普通游客身份进入
+	  		%>
+	  		<center>
+	  		<div class="ERROR-type">
+	  		<div class="ERROR-icon"><i class="fa fa-times-rectangle-o"></i></div>
+	  		<h2 class="ERROR-title">亲爱的管理员，您的ID获取失败！</h2></br>
+	  		<h3 class="ERROR-solution">请<a href="Sign-in.jsp">重新登录</a>！</h3>
+	  		</div>
+	  		</center>
+	  		<%  
+	  	}
+	  	else if(Emessage.equals("AdministratorServlet_list_NULL")){//--管理员无法获得用户信息表
+	  		%>
+	  		<center>
+	  		<div class="ERROR-type">
+	  		<div class="ERROR-icon"><i class="fa fa-times-rectangle-o"></i></div>
+	  		<h2 class="ERROR-title">亲爱的管理员，信息管理库获取失败！</h2></br>
+	  		<h3 class="ERROR-solution">请<a href="Sign-in.jsp">重新登录</a>！</h3>
+	  		</div>
+	  		</center>
+	  		<%  
+	  	}
+	  	else if(Emessage.equals("Administrator_list_NULL")){//--管理界面无法获得用户信息表
+	  		%>
+	  		<center>
+	  		<div class="ERROR-type">
+	  		<div class="ERROR-icon"><i class="fa fa-times-rectangle-o"></i></div>
+	  		<h2 class="ERROR-title">进入信息管理界面时，用户信息库获取失败！</h2></br>
+	  		<h3 class="ERROR-solution">请<a href="Sign-in.jsp">重新登录</a>！</h3>
+	  		</div>
+	  		</center>
+	  		<%  
+	  	}
+	  	else if(Emessage.equals("Admin_param_retrive")){//--管理员权限错误
+	  		%>
+	  		<center>
+	  		<div class="ERROR-type">
+	  		<div class="ERROR-icon"><i class="fa fa-times-rectangle-o"></i></div>
+	  		<h2 class="ERROR-title">权限错误！</h2></br>
+	  		<h3 class="ERROR-solution">请<a href="Sign-in.jsp">重新登录</a>！</h3>
+	  		</div>
+	  		</center>
+	  		<%  
+	  	}
+	  	else if(Emessage.equals("Admin_param_NULL")){//--管理员未输入权限参数
+	  		%>
+	  		<center>
+	  		<div class="ERROR-type">
+	  		<div class="ERROR-icon"><i class="fa fa-times-rectangle-o"></i></div>
+	  		<h2 class="ERROR-title">您无权限操作！</h2></br>
+	  		<h3 class="ERROR-solution">请以管理员身份<a href="Sign-in.jsp">登录</a>！</h3>
+	  		</div>
+	  		</center>
+	  		<%  
+	  	}
+	  	else if(Emessage.equals("Administrator_unchecked")){//--管理页面未选中任何记录
+	  		%>
+	  		<center>
+	  		<div class="ERROR-type">
+	  		<div class="ERROR-icon"><i class="fa fa-times-rectangle-o"></i></div>
+	  		<h2 class="ERROR-title">您未选中项目！</h2></br>
+	  		<h3 class="ERROR-solution">即将返回。。。</h3>
+	  		</div>
+	  		</center>
+	  		<%  
+	  			request.setAttribute("again", false);
+	  			request.getRequestDispatcher("AdministratorServlet").forward(request, response);
+	  			return;
+	  	}
+	  	else if(Emessage.equals("AdministratorServlet_unchecked")){//--AdministratorServlet无操作参数
+	  		%>
+	  		<center>
+	  		<div class="ERROR-type">
+	  		<div class="ERROR-icon"><i class="fa fa-times-rectangle-o"></i></div>
+	  		<h2 class="ERROR-title">未选择您要的操作！</h2></br>
+	  		<h3 class="ERROR-solution">即将返回。。。</h3>
+	  		</div>
+	  		</center>
+	  		<% 
+	  			request.setAttribute("again", true);
+	  			request.getRequestDispatcher("AdministratorServlet").forward(request, response);
+	  			return;
 	  	}
 	  	else if(request.getSession().getAttribute("ID")!=null){//ID不空
 		  	Integer ID = (Integer) request.getSession().getAttribute("ID");
@@ -199,8 +297,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  			</div>
 	  		</center>
 	  		<%  
-	  		response.setHeader("refresh", "3;url='login1.jsp'");
-	  		return;
+		  		response.setHeader("refresh", "3;url='login1.jsp'");
+		  		return;
 	  	}
 	  	else if(Emessage.equals("login3_NAME_ID_null")){//没有获得ID值--login3--name
 	  		%>
@@ -212,8 +310,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  			</div>
 	  		</center>
 	  		<%  
-	  		response.setHeader("refresh", "3;url='login1.jsp'");
-	  		return;
+		  		response.setHeader("refresh", "3;url='login1.jsp'");
+		  		return;
 	  	}
 	  	else if(Emessage.equals("login3_SENDER_ID_null")){//没有获得ID值--login3--sender
 	  		%>
@@ -225,8 +323,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  			</div>
 	  		</center>
 	  		<%  
-	  		response.setHeader("refresh", "3;url='login1.jsp'");
-	  		return;
+		  		response.setHeader("refresh", "3;url='login1.jsp'");
+		  		return;
 	  	}
 	  	else if(Emessage.equals("login3_SID_ID_null")){//没有获得ID值--login3--sid
 	  		%>
@@ -238,8 +336,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  		</div>
 	  		</center>
 	  		<%  
-	  		response.setHeader("refresh", "3;url='login1.jsp'");
-	  		return;
+		  		response.setHeader("refresh", "3;url='login1.jsp'");
+		  		return;
 	  	}
 	  	else if(Emessage.equals("login3_success_ID_null")){//没有获得ID值--login3--success
 	  		%>
@@ -262,8 +360,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  		</div>
 	  		</center>
 	  		<%  
-	  		response.setHeader("refresh", "3;url='login1.jsp'");
-	  		return;
+		  		response.setHeader("refresh", "3;url='login1.jsp'");
+		  		return;
 	  	}
   }
   else{//信息为空

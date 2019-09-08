@@ -14,16 +14,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>恰瓜--一起来吃瓜！</title>
     <style>
     	.uploaded{
-    		width: 200px;
-    		height: 100px;
-    		background-color: red;
-    		opacity: 0.3;
+    		width: 700px;
+    		height: 200px;
+    		margin-top:-138px;
+    		background-color: transparent;
     	}
     	.result-img{
-    		width: 200px;
-    		height: 100px;
-    		background-color: blue;
+    		width: 700px;
+    		height: 200px;
+    		background-color: transparent;
     	}
+    	.tip-words{
+			font-size: 14px;
+			margin-top:-120px;
+			font-family: "FangSong";
+			color: #999999;
+		}
     </style>
 </head>
 <body>
@@ -51,10 +57,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="icons" id='face-empty-result'>
                         </div>
                 </div>
+				<div class="tip-words">
+				<i class="fa fa-camera"></i>
+				<p>建议尺寸900*500，且图片大小小于1M</p>
+				</div>
 				<div class="uploaded">
                 	<img class="result-img" id='face-result' />
                 </div>
-				<div class="tip-words">建议尺寸900*500，且图片大小小于1M</div>
 			</div>
 			<div class="article-title"><input class="title-input" type="text" name="article-title" placeholder="在此输入标题"></div>
 	</center>
