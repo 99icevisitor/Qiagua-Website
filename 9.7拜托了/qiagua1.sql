@@ -200,7 +200,7 @@ CREATE TABLE `login` (
   `LAST_TIME` date DEFAULT NULL,
   `STATE` varchar(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,8 +209,33 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES ('111111',1,'admin','2019-01-01','0'),('OKAYas',2,'12','2019-09-05','未实名'),('盖伦',5,'asdf','2019-09-05','初步注册'),('盖伦123',6,'123','2019-09-05','初步注册'),('盖伦1232',7,'qw','2019-09-05','初步注册'),('盖伦124',8,'124','2019-09-05','初步注册'),('盖伦125',9,'125','2019-09-05','初步注册'),('盖伦126',10,'126','2019-09-05','初步注册'),('盖伦127',11,'127','2019-09-05','未实名'),('qianmo',12,'qianmo','2019-09-05','未实名');
+INSERT INTO `login` VALUES ('111111',1,'admin','2019-01-01','已实名'),('盖伦127',11,'127','2019-09-05','已实名'),('qianmo',12,'qianmo','2019-09-05','已实名'),('a',13,'1','2019-09-07','已实名'),('盖伦211',14,'211','2019-09-07','已实名'),('盖伦123',15,'123456','2019-09-08','未实名');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `message`
+--
+
+DROP TABLE IF EXISTS `message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `message` (
+  `SEND_ID` int(8) NOT NULL,
+  `RESV_ID` int(8) NOT NULL,
+  `SEND_TIME` datetime NOT NULL,
+  `CONTENT` varchar(1000) NOT NULL,
+  PRIMARY KEY (`SEND_ID`,`RESV_ID`,`SEND_TIME`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `message`
+--
+
+LOCK TABLES `message` WRITE;
+/*!40000 ALTER TABLE `message` DISABLE KEYS */;
+/*!40000 ALTER TABLE `message` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -329,9 +354,9 @@ DROP TABLE IF EXISTS `schv`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `schv` (
   `FAN_ID` int(8) NOT NULL,
-  `IDOL_ID` text NOT NULL,
+  `IDOL_ID` int(8) NOT NULL,
   `FAN_TIME` date NOT NULL,
-  PRIMARY KEY (`FAN_ID`)
+  PRIMARY KEY (`FAN_ID`,`IDOL_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -341,7 +366,6 @@ CREATE TABLE `schv` (
 
 LOCK TABLES `schv` WRITE;
 /*!40000 ALTER TABLE `schv` DISABLE KEYS */;
-INSERT INTO `schv` VALUES (2,'1','2019-09-06'),(11,'2','2019-09-06');
 /*!40000 ALTER TABLE `schv` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -363,8 +387,9 @@ CREATE TABLE `user` (
   `NAME` varchar(100) DEFAULT NULL,
   `SENDER` varchar(2) DEFAULT NULL,
   `RTIME` date DEFAULT NULL,
+  `USER_IMG` varchar(100) NOT NULL DEFAULT 'images/main/head.jpg',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -373,7 +398,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'111111','admin','1106910397@qq.com','18362993928','0',NULL,NULL,'f',NULL),(2,'OKAYas','12','122@123.com','13734932483','0',NULL,NULL,'',NULL),(11,'盖伦127','127','127@123.com','13734932427','0','342426197107224635','盖伦本伦','m',NULL),(12,'qianmo','qianmo','QIANMO@163.com','13212345678','0','370687100000000000','阡陌','f',NULL);
+INSERT INTO `user` VALUES (1,'111111','admin','1106910397@qq.com','18362993928','1','123456789112345678','张三','f',NULL,'images/main/head.jpg'),(2,'OKAYas','12','122@123.com','13734932483','0','342456198102236785','李四','m',NULL,'images/main/head.jpg'),(11,'盖伦127','127','127@123.com','13734932427','1','342456198102236785','盖伦','m',NULL,'images/main/head.jpg'),(12,'qianmo','qianmo','QIANMO@163.com','13212345678','1','123456789112345678','张三','f',NULL,'images/main/head.jpg'),(13,'a','1','17@qq.com','13874429386','1','123456789112345678','张三','f',NULL,'images/main/head.jpg'),(14,'盖伦211','211','211@gailun.com','13734932211','1','123456789112345678','张三','f',NULL,'images/main/head.jpg'),(15,'盖伦123','123456','123@123.com','13734932123','0',NULL,NULL,NULL,NULL,'images/main/head.jpg');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -398,7 +423,7 @@ CREATE TABLE `user_inf` (
 
 LOCK TABLES `user_inf` WRITE;
 /*!40000 ALTER TABLE `user_inf` DISABLE KEYS */;
-INSERT INTO `user_inf` VALUES (1,'11','本来是admin，后来一度在admin1与admin之间反复横跳2333'),(2,'南京','');
+INSERT INTO `user_inf` VALUES (1,'11','本来是admin，后来一度在admin1与admin之间反复横跳2333'),(2,'南京',''),(14,NULL,NULL),(15,'南京','一度反复横跳');
 /*!40000 ALTER TABLE `user_inf` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -411,4 +436,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-06 23:21:58
+-- Dump completed on 2019-09-08 10:06:32
