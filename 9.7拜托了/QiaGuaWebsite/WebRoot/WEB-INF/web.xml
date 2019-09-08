@@ -25,6 +25,11 @@
     <servlet-name>MessageServlet</servlet-name>
     <servlet-class>people.MessageServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>AdministratorServlet</servlet-name>
+    <servlet-class>people.AdministratorServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -51,6 +56,10 @@
   <servlet-mapping>
     <servlet-name>MessageServlet</servlet-name>
     <url-pattern>/MessageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdministratorServlet</servlet-name>
+    <url-pattern>/AdministratorServlet</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>

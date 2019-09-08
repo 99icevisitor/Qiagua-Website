@@ -4,10 +4,10 @@ import java.sql.*;
 import java.io.*;
 
 public class PwdBean {
-  private String pw;
-  private String newpw;
-  private String newpw2;
-  private String id;
+	private String pw;
+	private String newpw;
+	private String newpw2;
+	private String id;
 
     private String url="jdbc:mysql://localhost:3306/qiagua?serverTimezone=UTC";
     private String username="root";

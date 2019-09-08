@@ -2,6 +2,7 @@ package people;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -37,19 +38,36 @@ public class FollowServlet extends HttpServlet {
 		 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		response.setContentType("text/html");
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("UTF-8"); 
+		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
-		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
-		out.println("<HTML>");
-		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
-		out.println("  <BODY>");
-		out.print("    This is ");
-		out.print(this.getClass());
-		out.println(", using the GET method");
-		out.println("  </BODY>");
-		out.println("</HTML>");
-		out.flush();
-		out.close();
+		int user_id = (Integer)request.getSession().getAttribute("ID");
+		String jsp = (String)request.getSession().getAttribute("jsp");
+		request.getSession().setAttribute("ID", user_id);
+		String idol_id = request.getParameter("qia");		
+		FollowBean fan;
+		boolean flagFan = false;
+		try {
+			fan = new FollowBean();
+			if(fan.isFan(user_id, idol_id))
+				flagFan = fan.setFan(user_id, idol_id);
+			else
+				flagFan = fan.setNOTFan(user_id, idol_id);
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(flagFan)
+			if(jsp.equals("follow"))
+			request.getRequestDispatcher("Follow.jsp").forward(request, response);
+			else {
+				if(jsp.equals("follow2"))
+					request.getRequestDispatcher("Follow2.jsp").forward(request, response);
+			}			
+		else
+			System.out.println("出错");
 	}
 
 	/**
@@ -66,17 +84,31 @@ public class FollowServlet extends HttpServlet {
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
-		out.println("<HTML>");
-		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
-		out.println("  <BODY>");
-		out.print("    This is ");
-		out.print(this.getClass());
-		out.println(", using the POST method");
-		out.println("  </BODY>");
-		out.println("</HTML>");
-		out.flush();
-		out.close();
+		int user_id = (Integer)request.getSession().getAttribute("ID");
+		request.getSession().setAttribute("ID", user_id);
+		String idol_id = request.getParameter("idol");
+		FollowBean fan;
+		boolean flagFan = false;
+		try {
+			fan = new FollowBean();
+			if(fan.isFan(user_id, idol_id))
+				flagFan = fan.setFan(user_id, idol_id);
+			else
+				flagFan = fan.setNOTFan(user_id, idol_id);
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(flagFan)
+			if(request.getAttribute("jsp").equals("follow"))
+			request.getRequestDispatcher("Follow.jsp").forward(request, response);
+			else {
+				if(request.getAttribute("jsp").equals("follow2"))
+					request.getRequestDispatcher("Follow2.jsp").forward(request, response);
+			}			
+		else
+			System.out.println("出错");
 	}
 
 	/**
