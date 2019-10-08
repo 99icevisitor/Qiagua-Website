@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+a{
+  text-decoration: none;
+}
+.result{
+margin-left: 200px;
+width: 800px;
+height: auto;
+min-height: 800px;}
+.result .list{
+  height: 50px;
+  width: 800px;
+  border:1px solid #ccc;  
+}
+.result .tab{
+  border:none; 
+  margin-top:10px;
+  height: auto;
+  color: #838383;
+}
+.result .tab .cur{
+  margin-left: 10px;
+  margin-top: 10px;
+  border:1px solid #ccc;
+  float: left;
+}
+.result .list ul li{
+  float: left;
+  list-style-type: none;
+  line-height: 20px;
+  color: #838383;
+  width: 190px;
+  text-align:center; 
+}
+.result .tab .cur .xianshi p{
+ float: left;
+height: 20px;
+text-align: center;
+line-height: 20px;
+}
+.sr{
+  width: 1200px;
+  margin:0 auto;
+}

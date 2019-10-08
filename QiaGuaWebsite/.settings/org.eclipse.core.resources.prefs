@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//WebRoot/AlbChoice.jsp=UTF-8
+encoding//WebRoot/AlbCreate.jsp=UTF-8
+encoding//WebRoot/Article/ShowArticle.jsp=UTF-8
+encoding//WebRoot/ArticleManager2.jsp=UTF-8
+encoding//WebRoot/ArticleManager3.jsp=UTF-8
+encoding//WebRoot/ArticleShow.jsp=UTF-8
+encoding//WebRoot/Follow.jsp=UTF-8
+encoding//WebRoot/Sign-in.jsp=UTF-8
+encoding//WebRoot/User.jsp=UTF-8
+encoding//WebRoot/UserInfo.jsp=UTF-8
+encoding//WebRoot/WEditor/MyJsp.jsp=UTF-8
+encoding//WebRoot/main.jsp=UTF-8
+encoding//WebRoot/poser.jsp=UTF-8
+encoding//src/people/LoginServlet.java=UTF-8
+encoding//src/people/SignBean.java=UTF-8
+encoding//src/source/AlbBean.java=UTF-8

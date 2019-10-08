@@ -1,0 +1,120 @@
+@CHARSET "UTF-8";
+.follow{
+	border:1px solid #7ecef4;
+	border-radius: 30px;
+	color: #7ecef4;
+	font-size: 18px;
+	width:80px;
+	height: 40px;
+	background-color: white;
+	margin-top: -60px;
+	margin-left: 500px;
+}
+.unfollow{
+	border:1px solid;
+	border-radius: 30px;
+	color: white;
+	font-size: 18px;
+	width:80px;
+	height: 40px;
+	background-color: #7ecef4;
+	margin-top: -60px;
+	margin-left: 500px;
+}
+.main{
+	width: 600px;
+	height: auto ;
+	border:1px solid #D3D3D3;
+	margin: 0 auto;
+	border-bottom: none;
+	margin-top:100px;
+}
+#i1{
+	color: #838383;
+}
+#i2{
+	color: #7ecef4; 
+}
+i{
+	margin-top: 5px;
+
+}
+.action{
+	width: 700px;
+	height: 30px;
+	margin: 0 auto;
+}
+.action1{
+	width: 700px;
+	height: 30px;
+	margin: 0 auto;
+}
+.a{
+	width:200.5px;
+	height: 30px ;
+	border-bottom: none;
+	border-top: none;
+	border-left: none;
+	border:1px solid #D3D3D3;
+	float: left;
+	background-color: white;
+}
+.a:hover{
+	color: #7ecef4;
+}
+.c{
+	color: #7ecef4;
+}
+.b:hover{
+	color: #7ecef4;
+}
+.b{
+	background-color: white;
+	border:none;
+}
+#discuss{
+	width: 600px;
+	height: 100px;
+	border:1px solid #D3D3D3;
+	border-top: none;
+	margin:0 auto;
+	display: none;
+	background-color: #8383830d;
+}
+hr{
+	background-color: #D3D3D3;
+}
+button{
+	outline: none;
+	border:1px solid;
+}
+.d{
+	border-radius:20px;
+	height:35px;
+	width:80px;
+	color: #ffffff;
+}
+.d:active{
+	box-shadow: 0 1px 3px #0C5B83 inset,0 3px 0 #fff;
+	background: -webkit-linear-gradient(top,#7ecef4,#71C6EE);
+	background: -moz-linear-gradient(top,#7ecef4,#71C6EE);
+	background: linear-gradient(top,#7ecef4,#71C6EE);
+}
+.d:hover{
+	background: -webkit-linear-gradient(top,#7EC4EE,#61AFE0);
+	background: -moz-linear-gradient(top,#7EC4EE,#61AFE0);
+	background: linear-gradient(top,#7EC4EE,#61AFE0);
+}
+.d:hover:after{
+	background:-webkit-linear-gradient(right,#61BCDB,#97E0F3 60%);
+	background:-moz-linear-gradient(right,#61BCDB,#97E0F3 60%);
+	background:linear-gradient(right,#61BCDB,#97E0F3 60%); 
+}
+.alb{
+	width: 840px;
+	height: 200px;
+	border:1px solid #D3D3D3;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+

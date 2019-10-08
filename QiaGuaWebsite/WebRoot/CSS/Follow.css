@@ -1,0 +1,218 @@
+@CHARSET "UTF-8";
+a:link{
+	color: #838383;
+}
+a:visited{
+	color: #838383;
+}
+a:active{
+	color: #7ecef4;
+}
+.links{
+	width: 200px;
+	height: 40px;
+	margin-left: 10px;
+	padding-top: 30px;
+	font-family: "FangSong";
+	font-size: 18px;
+}
+.back-to-User{
+	text-decoration: none;
+	color: #7ecef4;
+}
+.back-to-User:link .back-to-User:visited{
+	color: #7ecef4;
+}
+.back-to-User:active{
+	color: #4fbcf0;
+}
+.main{
+	margin-left: 20%;
+	margin-top: 30px;
+	width: 940px;
+	height: 800px;
+    background-color: transparent;
+}
+.left{
+	width: 200px;
+	background-color: transparent;
+	height: 710px;
+}
+.my-fans{
+	width: 200px;
+	height: 60px;
+	background-color: white;
+}
+.my-idols{
+	width: 200px;
+	height: 60px;
+	background-color: transparent;
+}
+.left-btn{
+	padding-top: 20px;
+}
+.checked{
+	font-family: "FangSong";
+	font-size: 20px;
+	color: #7ecef4;
+	background-color: #edf9ff;
+}
+.unchecked{
+	font-family: "FangSong";
+	font-size: 20px;
+	background-color: transparent;
+}
+.right{
+	width:auto;
+	height: 710px;
+	position: relative;
+	margin-top: -710px;
+	margin-left: 200px;
+	-webkit-box-shadow:0 0 3px rgba(0,0,0,.2);
+    -moz-box-shadow:0 0 3px rgba(0,0,0,.2);
+    box-shadow:0 0 3px rgba(0,0,0,.2);
+    background-color: transparent;
+}
+.user-model{
+	width:auto;
+	height: 150px;
+	background-color: transparent;
+}
+.type-1{
+}
+.type-2{
+}
+.user-img{
+	width: 125px;
+	height: 125px;
+	padding-top: 25px;
+	padding-left: 25px;
+	background-color: transparent;
+}
+.img-style{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+.user-name{
+	width: 350px;
+	height: 40px;
+	background-color: transparent;
+	position: relative;
+	margin-left: 150px;
+}
+.style-2{
+	margin-top: -115px;
+}
+.style-3{
+	margin-top: -135px;
+}
+
+.name-style{
+	font-family: "FangSong";
+	font-style: bold;
+	font-size: 24px;
+	background-color: transparent;
+	padding-top: 10px;
+}
+.user-follows{
+	width: 350px;
+	height: 40px;
+	margin-left: 150px;
+	background-color: transparent;
+}
+.follow-style{
+	padding-top: 10px;
+	background-color: transparent;
+}
+.follow-style span{
+	color: #7ecef4;
+}
+.user-info{
+	width: 350px;
+	height: 40px;
+	margin-left: 150px;
+	background-color: transparent;
+	font-family: "FangSong";
+}
+.message-to{
+	position: relative;
+	height: 150px;
+	width: 50px;
+	margin-left: 550px;
+	margin-top: -115px;
+	background-color: transparent;
+}
+.btn-to-schv{
+	position: relative;
+	width: 100px;
+	height: 40px;
+	background-color: transparent;
+	margin-left: 620px;
+	margin-top: -100px;
+}
+.message{
+	width: 50px;
+	height: 20px;
+	padding-top: 60px;
+	background-color: transparent;
+}
+.message-to-3{
+	position: relative;
+	height: 150px;
+	width: 50px;
+	margin-left: 550px;
+	margin-top: -135px;
+	background-color: transparent;
+}
+.schv-btn-0{
+	width: 100px;
+	height: 40px;
+	border-radius: 30px;
+	border-color: #7ecef4;
+	background-color: #7ecef4;
+	color: white;
+}
+.schv-btn-1{
+	width: 100px;
+	height: 40px;
+	border-radius: 30px;
+	border: #7ecef4 1px;
+	background-color: white;
+	color: #7ecef4;
+}
+.btn-to{
+	color: white;
+}
+.schv-btn-0:link{
+	background-color: #7ecef4;
+}
+.schv-btn-0:hover{
+	background-color: #4fbcf0;
+}
+.schv-btn-0:visited{
+	background-color: white;
+	color: #7ecef4;
+}
+.schv-btn-1:link{
+	background-color: white;
+}
+.schv-btn-1:hover{
+	background-color: #c5e7f7;
+}
+.schv-btn-1:hover .schv-btn-1{
+	color: white;
+}
+.schv-btn-1:visited{
+	background-color: #7ecef4;
+	color: white;
+}
+.btn-to-schv>a{
+	text-decoration: none;
+}
+.unchecked>a{
+	text-decoration: none;
+}
+button{
+	outline:none;
+}
